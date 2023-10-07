@@ -6,16 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="<?= base_url("assets/css/profile.css")?>">
 </head>
-<body>
-    <div style=''>
-        <tr>
-            <img style= 'border-radius: 50%; width: 250px; height:250px; display: block; margin: auto;'src="https://i.ytimg.com/vi/Ux5cQbO_ybw/maxresdefault.jpg" alt="">  
-        </tr>
-    </div>
 
-    <div style='text-align:center;'>
-    <center>
-    <table style=''>
+<body>
+<div class = 'container '> 
+
+<img src="<?php echo base_url('assets/img/sigma.jpg');?>" alt="">
+
+    <table>
     <tr>
         <td>
             <?= $nama ?>
@@ -32,7 +29,8 @@
         </td>
     </tr>
     </table>
-    </center>
-    <div>
+
+</div>
+    
 </body>
 </html>
