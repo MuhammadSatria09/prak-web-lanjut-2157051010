@@ -1,29 +1,23 @@
-body {
-    text-align: center;
-}
-
-#top-section {
+td{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Adjust the height as needed */
 }
 
-#image-container {
-    text-align: center;
+img{
+    border-radius: 50%; 
+    width: 250px; 
+    height:250px;
+    display: block;
+    margin: auto;
 }
 
-#image-container img {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-}
-
-#info-table {
-    margin-top: 20px;
-}
-
-table {
-    text-align: center;
-    margin: 0 auto; /* Center the table horizontally */
+.container{
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

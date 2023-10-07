@@ -11,23 +11,44 @@
     <div class="create">
     <form action="<?= base_url('/user/store') ?>" method="post">
         <table>
+            
+        <?php if (session('validation')) : ?>
+            <ul>
+                <?php foreach (session('validation')->getErrors() as $error) : ?>
+                    <li><?= esc($error) ?></li>
+                <?php endforeach ?>
+            </ul>
+        <?php endif ?>
+
         <tr>
             <td>
-                Nama : <input type="text" name="nama" required>   
+                Nama : <input type="text" name="nama" >
+                <?= $validation->listErrors(); ?>
             </td>
         </tr>
         <tr>
             <td>
-                NPM : <input type="text" name="npm" required>
+                NPM : <input type="text" name="npm" >
             </td>
         </tr>
         <tr>
             <td>
-                Kelas : <input type="text" name="kelas" required>                  
+                Kelas : 
+                <select class="form-select" name="kelas" id="kelas">
+                    <?php
+                        foreach ($kelas as $item){
+                    ?>
+                            <option value="<?= $item['id'] ?>">
+                                           <?= $item['nama_kelas']?>
+                            </option>
+                    <?php
+                        }
+                    ?>
+                </select>                  
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="display: flex;align-items: center;justify-content: center;align-content: flex-end;">
                 <button class="btn" type="submit">submit</button>
             </td>
         </tr>
