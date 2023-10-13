@@ -1,4 +1,3 @@
-/* Add this CSS to your style.css file */
 body {
     display: flex;
     justify-content: center;
@@ -8,7 +7,7 @@ body {
 }
 
 .create {
-    border: 2px solid #333; /* You can change the border style and color as needed */
+    border: 2px solid #333;
     padding: 20px;
 }
 
@@ -16,7 +15,7 @@ table {
     width: 100%;
 }
 
-/* Optional: Style for the form elements */
+
 form {
     display: flex;
     flex-direction: column;
@@ -39,3 +38,27 @@ form input[type="text"] {
 .btn:hover {
     background-color: #555;
 }
+
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+
+  .table_user table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table_user table, .table_user td, .table_user th {
+    border: 1px solid black;
+  }
+  
+  .table_user th, .table_user td {
+    padding: 10px;
+    text-align: center;
+  }
+  

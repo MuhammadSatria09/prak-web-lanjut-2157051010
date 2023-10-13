@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="<?= base_url("assets/css/create.css")?>">
-</head>
-<body>
+<?= $this->extend('layouts/app')?>
     
+    <?= $this->section('content')?>
     <div class="create">
     <form action="<?= base_url('/user/store') ?>" method="post">
         <table>
-            
-        <?php if (session('validation')) : ?>
-            <ul>
-                <?php foreach (session('validation')->getErrors() as $error) : ?>
-                    <li><?= esc($error) ?></li>
-                <?php endforeach ?>
-            </ul>
-        <?php endif ?>
-
+              
         <tr>
             <td>
-                Nama : <input type="text" name="nama" >
-                <?= $validation->listErrors(); ?>
+                Nama : <input type="text" name="nama" value = <?= old('nama');?> >
+                <?php if (session('validation')) : ?>
+                    <?php echo (session('validation')->getError('nama')) ?>
+                <?php endif ?>
             </td>
         </tr>
         <tr>
             <td>
-                NPM : <input type="text" name="npm" >
+                NPM : <input type="text" name="npm" value = <?= old('npm');?>>
+                <?php if (session('validation')) : ?>
+                    <?php echo (session('validation')->getError('npm')) ?>
+                <?php endif ?>
             </td>
         </tr>
         <tr>
@@ -56,5 +46,4 @@
         </table>
     </form>
     </div>
-</body>
-</html>
+<?= $this->endSection()?>
