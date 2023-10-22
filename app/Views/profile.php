@@ -8,24 +8,26 @@
 </head>
 
 <body>
+    
+
 <div class = 'container '> 
 
-<img src="<?php echo base_url('assets/img/sigma.jpg');?>" alt="">
+<img src="<?= $user['foto']  ?? '<default-foto>'?>" alt="">
 
     <table>
     <tr>
         <td>
-            <?= $nama ?>
+            <?=$user['nama']?>
         </td>
     </tr>
     <tr>
         <td>
-            <?= $kelas ?>
+            <?= $user['nama_kelas'] ?>
         </td>
     </tr>
     <tr>
         <td>
-            <?= $npm ?>
+            <?= $user['npm'] ?>
         </td>
     </tr>
     </table>

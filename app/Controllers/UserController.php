@@ -63,6 +63,14 @@ class UserController extends BaseController
             $validation = \Config\Services::validation();
             return redirect()->to('/user/create')->withInput()->with('validation',$validation);
         }
+        
+        $path = 'assets/uploads/img';
+        $foto = $this->request->getFile('foto');
+        $name = $foto->getRandomName();
+
+        if($foto->move($path, $name)){
+            $foto = base_url($path . '/' . $name);
+        }
 
         $userModel = new UserModel();
 
@@ -70,6 +78,8 @@ class UserController extends BaseController
             'nama' => $this->request->getVar('nama'),
             'id_kelas' => $this->request->getVar('kelas'),
             'npm' => $this->request->getVar('npm'),
+            'foto' => $foto,
+            
         ]);
 
         $data = [
@@ -78,5 +88,16 @@ class UserController extends BaseController
             'npm' => $this->request->getVar('npm'),
         ];
         return redirect()->to('/user');
+    }
+
+    public function show($id){
+        $user = $this->userModel->getUser($id);
+
+        $data = [
+            'title' => 'Profile',
+            'user' => $user,
+        ];
+
+        return view ('profile',$data);
     }
 }

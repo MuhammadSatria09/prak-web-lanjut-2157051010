@@ -27,6 +27,7 @@
             <td><?= $user['npm'] ?></td>
             <td><?= $user['nama_kelas'] ?></td>
             <td>
+              <a href="<?= base_url('user/'.$user['id'])?>">Detail</a>
               <a class="btn_edit" href="">Edit</a>
               <a class="btn_hapus" href="">Hapus</a>
 
@@ -36,6 +37,7 @@
         ?>
       </tbody>
     </table>
+    <a href="<?= base_url('user/create')?>" class="Tambah">Tambah Data</a>
   </div>
 </div>
 <?= $this->endSection('content') ?>

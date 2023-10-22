@@ -1,8 +1,9 @@
 <?= $this->extend('layouts/app')?>
-    
+
     <?= $this->section('content')?>
+
     <div class="create">
-    <form action="<?= base_url('/user/store') ?>" method="post">
+    <form action="<?= base_url('/user/store') ?>" method="post" enctype= "multipart/form-data">
         <table>
               
         <tr>
@@ -38,6 +39,12 @@
             </td>
         </tr>
         <tr>
+            <td>
+                Foto :
+                <input type="file" name="foto" id="foto">        
+            </td>
+        </tr>
+        <tr>
             <td style="display: flex;align-items: center;justify-content: center;align-content: flex-end;">
                 <button class="btn" type="submit">submit</button>
             </td>
@@ -46,4 +53,5 @@
         </table>
     </form>
     </div>
+
 <?= $this->endSection()?>
