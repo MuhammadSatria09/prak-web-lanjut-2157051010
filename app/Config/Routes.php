@@ -16,3 +16,5 @@ $routes->get('user/create',[UserController::class,'create']);
 $routes->post('/user/store',[UserController::class, 'store']);
 
 $routes->get('/user', 'UserController::index');
+
+$routes->get('user/(:any)',[UserController::class,'show']   );
