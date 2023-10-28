@@ -1,0 +1,97 @@
+body{
+    margin: 0px;
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+    margin: 0;
+}
+
+.create {
+    border: 2px solid #333;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-radius: 25%;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form input[type="text"] {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+
+  .table_user table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table_user table, .table_user td, .table_user th {
+    border: 1px solid black;
+  }
+  
+  .table_user th, .table_user td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .container table td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar{
+    overflow: hidden;
+}
+
+.navbar a{
+    color: black;
+    background-color: white;
+    padding: 16px 24px;
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+}
