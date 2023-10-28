@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/app')?>
+<?= $this->section('content')?>
 
-    <?= $this->section('content')?>
+<div class="cont">
 
     <div class="create">
     <form action="<?= base_url('/user/'.$user['id']) ?>" method="post" enctype= "multipart/form-data">
@@ -65,5 +66,5 @@
         <?= csrf_field() ?>
     </form>
     </div>
-
+</div>
 <?= $this->endSection()?>

@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="<?= base_url("assets/css/profile.css")?>">
-</head>
+<?= $this->extend('layouts/app')?>
+<?= $this->section('content')?>
 
-<body>
-    
+<div class="cont">
 
 <div class = 'container '> 
-
-<img src="<?= $user['foto']  ?? base_url('assets/img/sigma.jpg') ?>" alt="">
-
     <table>
+    <tr>
+        <td>
+            <img style="
+                border-radius: 50%; 
+                width: 250px; 
+                height:250px;
+                display: block;
+                margin: auto;"
+            src="<?= $user['foto']  ?? base_url('assets/img/sigma.jpg') ?>" alt="">
+        </td>
+    </tr>
     <tr>
         <td>
             <?=$user['nama']?>
@@ -33,6 +34,6 @@
     </table>
 
 </div>
-    
-</body>
-</html>
+
+</div>
+<?= $this->endSection('content') ?>
