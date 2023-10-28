@@ -12,7 +12,7 @@
 
 <div class = 'container '> 
 
-<img src="<?= $user['foto']  ?? '<default-foto>'?>" alt="">
+<img src="<?= $user['foto']  ?? base_url('assets/img/sigma.jpg') ?>" alt="">
 
     <table>
     <tr>
