@@ -17,4 +17,10 @@ $routes->post('/user/store',[UserController::class, 'store']);
 
 $routes->get('/user', 'UserController::index');
 
-$routes->get('user/(:any)',[UserController::class,'show']   );
+$routes->get('/user/(:any)/edit',[UserController::class,'edit']);
+
+$routes->put('/user/(:any)',[UserController::class,'update']);
+
+$routes->get('user/(:any)',[UserController::class,'show']);
+
+$routes->delete('/user/(:any)',[UserController::class,'destroy']);
