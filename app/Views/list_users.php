@@ -1,6 +1,8 @@
 <?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
 
+<div class="cont">
+
 <div class="container3">
   <div class="table_user">
     <h3>
@@ -43,5 +45,6 @@
     </table>
     <a href="<?= base_url('user/create')?>" class="Tambah">Tambah Data</a>
   </div>
+</div>
 </div>
 <?= $this->endSection('content') ?>

@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/app')?>
+<?= $this->section('content')?>
 
-    <?= $this->section('content')?>
+<div class="cont">
 
     <div class="create">
     <form action="<?= base_url('/user/store') ?>" method="post" enctype= "multipart/form-data">
@@ -45,7 +46,7 @@
             </td>
         </tr>
         <tr>
-            <td style="display: flex;align-items: center;justify-content: center;align-content: flex-end;">
+            <td style="display: flex;align-items: center;justify-content: center;align-content: flex-end; border: 0px;">
                 <button class="btn" type="submit">submit</button>
             </td>
         </tr>
@@ -53,5 +54,5 @@
         </table>
     </form>
     </div>
-
+</div>
 <?= $this->endSection()?>
